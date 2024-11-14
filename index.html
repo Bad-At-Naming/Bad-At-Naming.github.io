@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;?&gt;</title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-black">
+  <div class="absolute top-0 m-10">
+    <p class="whitespace-break-spaces"><span id="chat"></span><span class="animate-pulse">▉</span></p>
+  </div>
+  <script>
+    (async () => {
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+      const text = "Th2rm0dynam1c Lawy2r: Any new intel on the project that they’re doing\nSPREADTHETRUTH222: No new intel so far but we heard a <a href='/14th November.pdf'>bang</a> and we suspect that may signal the start\nMrFregoliSendsHisRegards: Damn it, we’re behind already, we have to figure this out fast\nSPREADTHETRUTH222: If we don’t figure this out soon, everybody is in danger and he will take over\nTh2rm0dynam1c Lawy2r: Get to work now. We have no time to waste\nMrFregoliSendsHisRegards: Don’t worry, we’ll get them. We’re trying to crack something right now. Any ideas what “dod·fbcsjsspr·.gov·DgfocfxusdqohQ·” could mean?"
+      const elem = document.getElementById("chat");
+
+      await sleep(1000);
+      for (line of text.split("\n")) {
+        for (segment of line.split(/(?<=:)/g)) {
+          elem.innerHTML += segment;
+          await sleep(500);
+        }
+        elem.innerHTML += "\n";
+        await sleep(500);
+      }
+    })();
+  </script>
+</body>
+
+</html>
