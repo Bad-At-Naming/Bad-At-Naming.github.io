@@ -586,6 +586,14 @@ video {
 }
 
 p {
-  color: #25ff00;
+  color: #2f0;
   font-family: "Source Code Pro", monospace;
+}
+
+a {
+  color: #6f0;
+}
+
+a:hover {
+  color: #24c408;
 }
